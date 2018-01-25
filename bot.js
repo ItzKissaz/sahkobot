@@ -6,12 +6,20 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'moi') {
+    if (message.content === ':stats') {
     	message.
-        reply('Moi! Mitä kuuluu!');
-        message.reply('OMG! Se toimii')
+        reply('**Chocolate Bot By** __RaikaZ#0178__!');
+        message.reply('More soon')
   	}
-}    
+}
+client.on('message', message => {
+    if (message.content === ':help') {
+    	message.
+        reply('**Chocolate Bot Commands:**');
+        message.reply('**:help = Send the command list**')
+        message.reply('**:stats** = **Send bot stats to chat**')
+  	}
+} 
          );
 
 // THIS  MUST  BE  THIS  WAY
