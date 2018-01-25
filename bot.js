@@ -9,7 +9,7 @@ client.on('message', message => {
     if (message.content === 'moi') {
     	message.
         reply('Moi! Mitä kuuluu!');
-        message.reply('OMG! Se toimii')
+        replu('OMG! Se toimii')
   	}
 }    
          );
