@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'help') {
+    if (message.content === 'Chelp') {
     	message.
         reply('**Chocolate Bot By __RaikaZ#0178__**')
   	}
