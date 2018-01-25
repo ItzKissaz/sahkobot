@@ -6,10 +6,10 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'moi') {
+    if (message.content === 'stats') {
     	message.
-        reply('Moi! Mitä kuuluu!');
-        replu('OMG! Se toimii')
+        reply('**Chocolate Bot By** __RaikaZ#0178__!');
+        message.reply('More soon')
   	}
 }    
          );
