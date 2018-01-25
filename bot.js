@@ -5,6 +5,7 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 bot.registery.registerGroup('random', 'Random');
+bot.registery.registerDefaults();
 bot.registery.registerCommandsIn(__dirname + "/commands");
 client.on('message', message => {
     if (message.content === ':stats') {
