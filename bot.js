@@ -8,14 +8,14 @@ bot.registery.registerGroup('random', 'Random');
 bot.registery.registerDefaults();
 bot.registery.registerCommandsIn(__dirname + "/commands");
 client.on('message', message => {
-    if (message.content === ':stats') {
+    if (message.content === 'stats') {
     	message.
         reply('**Chocolate Bot By** __RaikaZ#0178__!');
         message.reply('More soon')
   	}
 }
 client.on('message', message => {
-    if (message.content === ':help') {
+    if (message.content === 'help') {
     	message.
         reply('**Chocolate Bot Commands:**');
         message.reply('**:help = Send the command list**')
