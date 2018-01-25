@@ -6,10 +6,9 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'stats') {
+    if (message.content === 'help') {
     	message.
-        reply('**Chocolate Bot By** __RaikaZ#0178__!');
-        message.reply('More soon')
+        reply('**Chocolate Bot By __RaikaZ#0178__**')
   	}
 }    
          );
