@@ -11,8 +11,9 @@ bot.on('message', (message) => {
 
 bot.on('message', (message) => {
     if(message.content == 'Cbot') {
-        message.channel.sendMessage('**Chocolate Bot __Version 0.1__');
+        message.channel.sendMessage('**Chocolate Bot** __Version 0.1__');
         message.channel.sendMessage('__This **Discord Bot** Using Discord.NET. Bots host is **Heroku**__');
+        message.channel.sendMessage('Help command = **Chelp**')
     }
         });
 
