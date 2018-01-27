@@ -1,6 +1,6 @@
 {
-  "name": "Test",
-  "description": "Test",
+  "name": "Chocolate-Bot",
+  "description": "Chocolate-Bot is a bot",
   "version": "0.0.0",
   "main": "bot.js",
   "scripts": {
