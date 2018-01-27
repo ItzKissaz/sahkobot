@@ -1,17 +1,12 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const bot = new Discord.Client();
 
-client.on('ready', () => {
-    console.log('I am ready!');
+client.on('message', (message) => {
+    if(message.content == 'Chelp') {
+        message.
+        reply('**Chocolate Bot By __RaikaZ#0178__**')
+        }
 });
 
-client.on('message', message => {
-    if (message.content === 'Chelp') {
-    	message.
-        reply('**Chocolate Bot By __RaikaZ#0178__**')
-  	}
-}    
-         );
 
-// THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
+bot.login('NDA1MDM5MjkyODcyNjU0ODU4.DU3IVw.yph7a4t9m4AwP7Q3u71HcnUPe4Y');
