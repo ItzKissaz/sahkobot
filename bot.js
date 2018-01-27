@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const bot = new commando.Client();
+const bot = new Discord.Client();
 
 bot.registery.registerGroup('random', 'Random');
 bot.registery.registerDefaults();
