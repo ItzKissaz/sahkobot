@@ -19,7 +19,7 @@ bot.on('message', (message) => {
 });
 bot.on('message', (message) => {
     if(message.content == 'Cban') {
-        message.channel.sendMessage('**ERROR:** __Command not done!__ @/ RαikaZ™ \#0178  is so sorry');
+        message.channel.sendMessage('**ERROR:** __Command not done!__ @RaikaZ\#0178  is so sorry');
         message.channel.sendFile('sorry.png');
     }
 });
