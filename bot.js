@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 client.on('message', (message) => {
     if(message.content == 'Chelp') {
         message.
-        reply('**Chocolate Bot By __RaikaZ#0178__**')
+        reply('**Chocolate Bot By __RaikaZ#0178__**');
         }
 });
 
