@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 bot.on('message', (message) => {
     if(message.content == 'Chelp') {
         message.reply('**Chocolate Bot** __Help:__');
-        message.channel.sendMessage('**Cban** = __Bans__ the user ```COMING SOON````');
+        message.channel.sendMessage('**Cban** = __Bans__ the user ```COMING SOON```');
         message.channel.sendMessage('**Cbot** = Bot info');
         message.channel.sendMessage('**Chocolate Bot By __RaikaZ#0178__**');
         }
@@ -19,7 +19,7 @@ bot.on('message', (message) => {
 });
 bot.on('message', (message) => {
     if(message.content == 'Cban') {
-        message.channel.sendMessage('**ERROR:** __Command not done!__ @RaikaZ#0178 is so sorry');
+        message.channel.sendMessage('**ERROR:** __Command not done!__ @/ RαikaZ™ \#0178  is so sorry');
         message.channel.sendFile('sorry.png');
     }
 });
