@@ -35,7 +35,7 @@ bot.on("ready", () => {
 });
 // Set the bot's online/idle/dnd/invisible status
 bot.on("ready", () => {
-    boy.user.setStatus("dnd");
+    bot.user.setStatus("dnd");
 });        
 bot.on('message', (message) => {
     if(message.content == 'c!admin test') {
