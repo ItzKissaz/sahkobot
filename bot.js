@@ -20,7 +20,7 @@ bot.on('message', (message) => {
 bot.on('message', (message) => {
     if(message.content == 'c!admin test') {
         message.channel.sendMessage('Check your **Direct Messages**')
-        message.author.sendMessage("Your message here.")
+        message.author.sendMessage("Working :)")
     }
 });
         
