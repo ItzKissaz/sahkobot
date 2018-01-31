@@ -34,13 +34,9 @@ bot.on("ready", () => {
 bot.on("ready", () => {
     bot.user.setStatus("dnd");
 });        
-bot.on('message', (message) => {
-    if(message.content == 'c!admin test') {
-        // Send a Direct Message to a user
-        message.author.send("hello");
-        // With Member it works too:
-        message.member.send("Heya!");
-    }
-});
 
 bot.login('NDA1MDM5MjkyODcyNjU0ODU4.DVJCgQ.eKTu3KpKiccLHmqr9wxl-fyzsaM');
+
+
+
+
