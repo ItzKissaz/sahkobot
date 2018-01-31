@@ -15,8 +15,8 @@ bot.on('message', async message => {
         }
 
     if(message.content.startsWith(prefix + 'bot')) {
-        message.channel.sendMessage('**Chocolate Bot** __Version 0.1__');
-        message.channel.sendMessage('__This **Discord Bot** Using Discord.NET. Bots host is **Heroku**__');
+        message.channel.sendMessage('**Chocolate Bot** __Version 0.5__');
+        message.channel.sendMessage('__This **Discord Bot** Using Discord.js. Bots host is **Heroku**__');
         message.channel.sendMessage('Help command = **c!help**')
     };
 
@@ -24,8 +24,8 @@ bot.on('message', async message => {
         message.channel.sendMessage('Check your **Direct Messages**')
         message.author.sendMessage("Working :)")
     };
-     if (message.content.startsWith(prefix + "embed")) {
-     var opijs = new Discord.RichEmbed().setColor(0x0000FF).addField("Opi JavaScriptaan", "Nii opi pls JavaSciptaan")
+     if (message.content.startsWith(prefix + "versiom")) {
+     var versio = new Discord.RichEmbed().setColor(0x0000FF).addField("**Version 0.5**", "**Added**", "New code style.", "**Removed**", "Nothing", "**__Fixed__**, "Nothing")
      message.channel.sendEmbed(opijs)
      };
     if(message.content.startsWith(prefix + 'admin tinder')) {
