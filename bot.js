@@ -23,6 +23,19 @@ bot.on('message', (message) => {
         message.channel.sendFile('sorry.png');
     }
 });
-        
+// Set the bot's "Playing: " status (must be in an event!)
+// NOTE: THIS METHOD IS DEPRECATED AS OF VERSION 11.3 AND WILL BE REMOVED IN VERSION 12
+client.on("ready", () => {
+    client.user.setGame("ChocolateBot | c!help");
+});
+
+// NOTE: INTRODUCED IN VERSION 11.3 AND REPLACES setGame
+client.on("ready", () => {
+    client.user.setActivity({game: {name: "ChocolateBot | c!help", type: 0}});
+});
+// Set the bot's online/idle/dnd/invisible status
+client.on("ready", () => {
+    client.user.setStatus("dnd");
+});        
 
 bot.login('NDA1MDM5MjkyODcyNjU0ODU4.DVJCgQ.eKTu3KpKiccLHmqr9wxl-fyzsaM');
