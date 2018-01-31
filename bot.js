@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 bot.on('message', (message) => {
-    if(message.content == 'Chelp') {
+    if(message.content == 'c!help') {
         message.reply('**Chocolate Bot** __Help:__');
         message.channel.sendMessage('**Cban** = __Bans__ the user ```COMING SOON```');
         message.channel.sendMessage('**Cbot** = Bot info');
