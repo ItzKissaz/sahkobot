@@ -31,7 +31,7 @@ bot.on("ready", () => {
 
 // NOTE: INTRODUCED IN VERSION 11.3 AND REPLACES setGame
 bot.on("ready", () => {
-    client.user.setActivity({game: {name: "ChocolateBot | c!help", type: 0}});
+    bot.user.setActivity({game: {name: "ChocolateBot | c!help", type: 0}});
 });
 // Set the bot's online/idle/dnd/invisible status
 bot.on("ready", () => {
