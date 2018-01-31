@@ -46,7 +46,7 @@ bot.on('message', (message) => {
     }
 });
 bot.on('message', (message) => {
-    if(message.content == 'c!admin changemessage normal') 
+    if(message.content == 'c!admin changemessage normal') {
         message.channel.sendMessage('Changed the **Playing** message');
         bot.user.setGame('chocolatebot.tk | c!help ');
     }
