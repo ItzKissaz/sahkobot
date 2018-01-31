@@ -32,9 +32,7 @@ bot.on('message', (message) => {
         message.channel.sendFile('sorry.png');
     }
 });
-bot.on('ready', () => {
-  bot.user.setGame('chocolatebot.tk | c!help |');
-});
+
 bot.on('message', (message) => {
     if(message.content == 'c!admin changemessage huoltokatko') {
         message.channel.sendMessage('Changed the **Playing** message');
@@ -50,9 +48,15 @@ bot.on('message', (message) => {
 
 // Set the bot's online/idle/dnd/invisible status
 bot.on("ready", () => {
-    bot.user.setStatus("dnd");
+    bot.user.setStatus("idle");
 });        
-
+bot.on("ready", () => {
+  // This event will run if the bot starts, and logs in, successfully.
+  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
+  // Example of changing the bot's playing game to something useful. `client.user` is what the
+  // docs refer to as the "ClientUser".
+  bot.user.setGame(`on ${client.guilds.size} servers`);
+});
 bot.login('NDA1MDM5MjkyODcyNjU0ODU4.DVJCgQ.eKTu3KpKiccLHmqr9wxl-fyzsaM');
 
 
