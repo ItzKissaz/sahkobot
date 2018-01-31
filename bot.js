@@ -18,9 +18,9 @@ bot.on('message', (message) => {
     }
 });
 bot.on('message', (message) => 
-       if(message.content == 'c!admin test') {
-       message.author.sendMessage("Your message here.")
-       }
+     if(message.content == 'c!admin test') {
+        message.author.sendMessage("Your message here.")
+     }
 });
 bot.on('message', (message) => {
     if(message.content == 'Cban') {
