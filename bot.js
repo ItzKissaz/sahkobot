@@ -25,7 +25,7 @@ bot.on('message', (message) => {
         let age = args[0]; // Remember arrays are 0-based!.
         let sex = args[1];
         let location = args[2];
-        message.reply(`Hello ${message.author.username}, I see you're a ${age} year old ${sex} from ${location}. Wanna date?`);
+        message.reply('Hello ${message.author.username}, I see you`re a ${age} year old ${sex} from ${location}. Wanna date?');
 }
     }
 });
@@ -55,12 +55,13 @@ bot.on('message', (message) => {
 // Set the bot's online/idle/dnd/invisible status
 bot.on("ready", () => {
     bot.user.setStatus("idle");
+    console.log('Bot is now online');
 });        
 bot.on("ready", () => {
   // This event will run if the 
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
-  bot.user.setGame('with Chocolate')
+  bot.user.setGame('with Chocolate');
   // Example of changing the bot's playing gamen $bot.guilds.size} servers`);
 });
 bot.login('NDA1MDM5MjkyODcyNjU0ODU4.DVJCgQ.eKTu3KpKiccLHmqr9wxl-fyzsaM');
