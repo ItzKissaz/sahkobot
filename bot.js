@@ -17,8 +17,8 @@ bot.on('message', (message) => {
         message.channel.sendMessage('Help command = **Chelp**')
     }
 });
-bot.on('message', (message) => 
-     if(message.content == 'c!admin test') {
+bot.on('message', (message) => {
+    if(message.content == 'c!admin test') {
         message.author.sendMessage("Your message here.")
      }
 });
