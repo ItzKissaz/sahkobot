@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 
 var prefix = "c!";
 
-bot.on("ready", () => client.user.setPresence({ status: "idle", game: {name: `chocolatebot.tk | c!help`} }));
+bot.on("ready", () => bot.user.setPresence({ status: "idle", game: {name: `chocolatebot.tk | c!help`} }));
 console.log("Olen valmiina!");
 
 bot.on('message', (message) => {
