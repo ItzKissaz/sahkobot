@@ -25,8 +25,8 @@ bot.on('message', async message => {
         message.author.sendMessage("Working :)")
     };
     if (message.content.startsWith(prefix + 'version')) {
-         var versio = new Discord.RichEmbed().setColor(0x0000FF).addField("**Version 0.5**", "**Added**", "New code style.", "**Removed**", "Nothing", "**__Fixed__**", "Nothing")
-         message.channel.sendEmbed(versio)
+         var versio = new Discord.RichEmbed().setColor(0x0000FF).addField("**Version 0.5**", "**Added**", "New code style.", "**Removed**", "Nothing", "**__Fixed__**", "NothingH.");
+         message.channel.sendEmbed(versio);
      };
     if(message.content.startsWith(prefix + 'admin tinder')) {
         let age = args[0]; // Remember arrays are 0-based!.
