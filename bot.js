@@ -24,7 +24,10 @@ bot.on('message', async message => {
         message.channel.sendMessage('Check your **Direct Messages**')
         message.author.sendMessage("Working :)")
     };
-
+     if (message.content.startsWith(prefix + "embed")) {
+     var opijs = new Discord.RichEmbed().setColor(0x0000FF).addField("Opi JavaScriptaan", "Nii opi pls JavaSciptaan")
+     message.channel.sendEmbed(opijs)
+     };
     if(message.content.startsWith(prefix + 'admin tinder')) {
         let age = args[0]; // Remember arrays are 0-based!.
         let sex = args[1];
