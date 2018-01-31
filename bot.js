@@ -19,9 +19,13 @@ bot.on('message', (message) => {
 });
 bot.on('message', (message) => {
     if(message.content == 'c!admin test') {
+        message.channel.sendMessage('Check your **Direct Messages**')
         message.author.sendMessage("Your message here.")
-     }
+    }
 });
+        
+     
+
 bot.on('message', (message) => {
     if(message.content == 'Cban') {
         message.channel.sendMessage('**ERROR:** __Command not done!__ @RaikaZ\#0178  is so sorry');
