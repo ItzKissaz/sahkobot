@@ -51,11 +51,11 @@ bot.on("ready", () => {
     bot.user.setStatus("idle");
 });        
 bot.on("ready", () => {
-  // This event will run if the bot starts, and logs in, successfully.
-  console.log(`Bot has started, with $bot.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
+  // This event will run if the 
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
-  bot.user.setGame(`on $bot.guilds.size} servers`);
+  bot.user.setGame('with Chocolate')
+  // Example of changing the bot's playing gamen $bot.guilds.size} servers`);
 });
 bot.login('NDA1MDM5MjkyODcyNjU0ODU4.DVJCgQ.eKTu3KpKiccLHmqr9wxl-fyzsaM');
 
