@@ -32,6 +32,9 @@ bot.on('message', (message) => {
         message.channel.sendFile('sorry.png');
     }
 });
+bot.on('ready', () => {
+  bot.user.setGame('chocolatebot.tk | c!help |')
+})
 // Set the bot's online/idle/dnd/invisible status
 bot.on("ready", () => {
     bot.user.setStatus("dnd");
