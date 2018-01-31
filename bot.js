@@ -27,14 +27,27 @@ bot.on('message', (message) => {
      
 
 bot.on('message', (message) => {
-    if(message.content == 'Cban') {
+    if(message.content == 'c!ban') {
         message.channel.sendMessage('**ERROR:** __Command not done!__ @RaikaZ\#0178  is so sorry');
         message.channel.sendFile('sorry.png');
     }
 });
 bot.on('ready', () => {
-  bot.user.setGame('chocolatebot.tk | c!help |')
-})
+  bot.user.setGame('chocolatebot.tk | c!help |');
+});
+bot.on('message', (message) => {
+    if(message.content == 'c!admin changemessage huoltokatko') {
+        message.channel.sendMessage('Changed the **Playing** message');
+        bot.user.setGame('chocolatebot.tk | FixPause');
+    }
+});
+bot.on('message', (message) => {
+    if(message.content == 'c!admin changemessage normal') {
+        message.channel.sendMessage('Changed the **Playing** message');
+        bot.user.setGame('chocolatebot.tk | c!help ');
+    }
+});
+
 // Set the bot's online/idle/dnd/invisible status
 bot.on("ready", () => {
     bot.user.setStatus("dnd");
