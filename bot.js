@@ -21,7 +21,7 @@ bot.on('message', async message => {
     };
      
     if (message.content.startsWith(prefix + "stats")) {
-    var opijs = new Discord.RichEmbed().setColor(0x0000FF).addField("**Bot Stats**", "Servers" + bot.server.length )
+    var opijs = new Discord.RichEmbed().setColor(0x0000FF).addField("**Bot Stats**", "Servers", bot.server.length )
     message.channel.sendEmbed(opijs)
 };
     if(message.content.startsWith(prefix + 'admin test')) {
