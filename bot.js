@@ -23,14 +23,7 @@ bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'admin test')) {
         message.channel.sendMessage('Check your **Direct Messages**')
         message.author.sendMessage("Working :)")
-        
-    };
-    if(message.content.startsWith(prefix + 'ban')) {
-        message.channel.sendMessage('**ERROR:** __Command not done!__ \n@RaikaZ#0178 is so sorry');
-    };
-
-    if(message.content.startsWith(prefix + 'admin react') {
-       message.channel.send(":apple:***SONDAGE :apple:\n "+choix1+" ou "+""+choix2+"***").then(function (message) {
+        message.channel.send(":apple:***SONDAGE :apple:\n "+choix1+" ou "+""+choix2+"***").then(function (message) {
               message.react("👍")
               message.react("👎")
               message.pin()
@@ -38,7 +31,15 @@ bot.on('message', async message => {
             }).catch(function() {
               //Something
             });
-    }
+        
+    };
+    if(message.content.startsWith(prefix + 'ban')) {
+        message.channel.sendMessage('**ERROR:** __Command not done!__ \n@RaikaZ#0178 is so sorry');
+    };
+
+    react') {
+       
+            
     });
 
 bot.login("NDA1MDM5MjkyODcyNjU0ODU4.DVJCgQ.eKTu3KpKiccLHmqr9wxl-fyzsaM");
