@@ -37,7 +37,8 @@ bot.on('message', async message => {
               message.delete()
             }).catch(function() {
               //Something
-             });
+            });
+    }
     });
 
 bot.login("NDA1MDM5MjkyODcyNjU0ODU4.DVJCgQ.eKTu3KpKiccLHmqr9wxl-fyzsaM");
