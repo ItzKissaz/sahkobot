@@ -23,7 +23,7 @@ bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'admin test')) {
         message.channel.sendMessage('Check your **Direct Messages**')
         message.author.sendMessage("Working :)")
-        message.channel.send(":apple:***SONDAGE :apple:\n "+choix1+" ou "+""+choix2+"***").then(function (message) {
+        message.channel.sendMessge("Test").then(function (message) {
               message.react("👍")
               message.react("👎")
               message.pin()
