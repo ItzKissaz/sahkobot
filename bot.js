@@ -34,26 +34,14 @@ bot.on('message', async message => {
 
     if(message.content.startsWith(prefix + 'updates') {
        
-       message.channel.send({embed: {
-    color: 3447003,
-    author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
-    },
-    title: "This is an embed",
-    url: "http://google.com",
-    description: "This is a test embed to showcase what they look like and what they can do.",
-    fields: [{
-        name: "Fields",
-        value: "They can have different fields with small headlines."
-      },
+       message.channel.send({embed: {color: 3447003, author: {name: client.user.username, icon_url: client.user.avatarURL}, title: "This is an embed", url: "http://google.com", description: "This is a test embed to showcase what they look like and what they can do.", fields: [{name: "Fields", value: "They can have different fields with small headlines."},
       {
         name: "Masked links",
         value: "You can put [masked links](http://google.com) inside of rich embeds."
       },
       {
         name: "Markdown",
-    }
+      };
     });
 
 bot.login("NDA1MDM5MjkyODcyNjU0ODU4.DVJCgQ.eKTu3KpKiccLHmqr9wxl-fyzsaM");
