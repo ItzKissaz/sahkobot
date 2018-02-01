@@ -37,7 +37,7 @@ bot.on('message', async message => {
         message.channel.sendMessage('**ERROR:** __Command not done!__ \n@RaikaZ#0178 is so sorry');
     };
 
-    react') {
+    
        
             
     });
