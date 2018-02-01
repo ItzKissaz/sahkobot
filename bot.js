@@ -21,33 +21,18 @@ bot.on('message', async message => {
     };
      
     if (message.content.startsWith(prefix + "stats")) {
-    var opijs = new Discord.RichEmbed().setColor(0x0000FF).addField("**Bot Stats**", "Servers", bot.server.length )
-    message.channel.sendEmbed(opijs)
-};
+    message.channel.sendMessage('**ChocolateBot** Stats:')
+    message.channel.sendMessage('Servers:' + bot.server.length)
+    };
     if(message.content.startsWith(prefix + 'admin test')) {
         message.channel.sendMessage('Check your **Direct Messages**')
         message.author.sendMessage("Working :)")
     };
-    if(message.content.startsWith(prefix + 'admin tinder')) {
-        let age = args[0]; // Remember arrays are 0-based!.
-        let sex = args[1];
-        let location = args[2];
-        message.reply(`Hello ${message.author.username}, I see you're a ${age} year old ${sex} from ${location}. Wanna date?`);
-    };
-
     if(message.content.startsWith(prefix + 'ban')) {
         message.channel.sendMessage('**ERROR:** __Command not done!__ \n@RaikaZ#0178 is so sorry');
     };
 
-    if(message.content.startsWith(prefix + 'admin changemessage huoltokatko')) {
-        message.channel.sendMessage('Changed the **Playing** message');
-        bot.user.setGame('chocolatebot.tk | FixPause');
-    };
 
-    if(message.content.startsWith(prefix + 'admin changemessage normal')) {
-        message.channel.sendMessage('Changed the **Playing** message');
-        bot.user.setGame('chocolatebot.tk | c!help ');
-    };
 
     });
 
