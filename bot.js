@@ -20,28 +20,24 @@ bot.on('message', async message => {
         message.channel.sendMessage('Help command = **c!help**')
     };
      
-    if (message.content.startsWith(prefix + "stats")) {
-    message.channel.sendMessage('**ChocolateBot** Stats:')
-    message.channel.sendMessage('Servers:' + bot.servers.length)
-    };
     if(message.content.startsWith(prefix + 'admin test')) {
         message.channel.sendMessage('Check your **Direct Messages**')
         message.author.sendMessage("Working :)")
+        
     };
     if(message.content.startsWith(prefix + 'ban')) {
         message.channel.sendMessage('**ERROR:** __Command not done!__ \n@RaikaZ#0178 is so sorry');
     };
 
-    if(message.content.startsWith(prefix + 'updates') {
-       
-       message.channel.send({embed: {color: 3447003, author: {name: client.user.username, icon_url: client.user.avatarURL}, title: "This is an embed", url: "http://google.com", description: "This is a test embed to showcase what they look like and what they can do.", fields: [{name: "Fields", value: "They can have different fields with small headlines."},
-      {
-        name: "Masked links",
-        value: "You can put [masked links](http://google.com) inside of rich embeds."
-      },
-      {
-        name: "Markdown",
-      };
+    if(message.content.startsWith(prefix + 'admin react') {
+       message.channel.send(":apple:***SONDAGE :apple:\n "+choix1+" ou "+""+choix2+"***").then(function (message) {
+              message.react("👍")
+              message.react("👎")
+              message.pin()
+              message.delete()
+            }).catch(function() {
+              //Something
+             });
     });
 
 bot.login("NDA1MDM5MjkyODcyNjU0ODU4.DVJCgQ.eKTu3KpKiccLHmqr9wxl-fyzsaM");
