@@ -5,7 +5,7 @@ var prefix = "c!";
 
 bot.on("ready", () => bot.user.setPresence({ status: "idle", game: {name: `chocolatebot.tk | c!help`} }));
 console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
-
+console.log("Myöskään virheitä ei löytynyt");
 bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'help')) {
         message.reply('**Chocolate Bot** __Help:__');
@@ -20,8 +20,8 @@ bot.on('message', async message => {
         message.channel.sendMessage('Help command = **c!help**')
     };
      
-    if (message.content.startsWith(prefix + "embed")) {
-    var opijs = new Discord.RichEmbed().setColor(0x0000FF).addField("Opi JavaScriptaan", "Nii opi pls JavaSciptaan")
+    if (message.content.startsWith(prefix + "stats")) {
+    var opijs = new Discord.RichEmbed().setColor(0x0000FF).addField("**Bot Stats**", "Nii opi pls JavaSciptaan")
     message.channel.sendEmbed(opijs)
 };
     if(message.content.startsWith(prefix + 'admin test')) {
