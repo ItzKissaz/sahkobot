@@ -23,6 +23,7 @@ bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'admin test')) {
         message.channel.sendMessage('Check your **Direct Messages**')
         message.author.sendMessage("Working :)")
+        message.author.sendMessaege("Servers: " + bot.servers.size + "xd")
         message.channel.sendMessge("Test").then(function (message) {
               message.react("👍")
               message.react("👎")
