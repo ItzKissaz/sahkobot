@@ -28,7 +28,7 @@ bot.on('message', async message => {
               message.react("👍")
               message.react("👎")
               message.pin()
-              message.delete()
+              
             }).catch(function() {
               //Something
             });
@@ -43,4 +43,4 @@ bot.on('message', async message => {
             
     });
 
-bot.login("NDA1MDM5MjkyODcyNjU0ODU4.DVJCgQ.eKTu3KpKiccLHmqr9wxl-fyzsaM");
+bot.login("NDE4NDYyNDIwOTM2MTYzMzM2.DXh8Mg.BJtmfEV6_b12l0ZpNQMnNSKhn6g");
