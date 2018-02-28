@@ -21,17 +21,16 @@ bot.on('message', async message => {
     };
      
     if(message.content.startsWith(prefix + 'admin test')) {
-        message.channel.sendMessage('Check your **Direct Messages**')
-        message.author.sendMessage("Working :)")
-        message.author.sendMessaege("Servers: " + bot.servers.size + "xd")
-        message.channel.sendMessge("Test").then(function (message) {
-              message.author.react("👍");
-              message.react("👎");
-              message.pin();
+        message.channel.sendMessage('Check your **Direct Messages**');
+        message.author.sendMessage("Working :)");
+        message.author.sendMessaege("Servers: " + bot.servers.size + "xd");
+        message.author.react("👍");
+        message.react("👎");
+        message.pin();
+        };
               
-            }).catch(function() {
-              //Something
-            });
+              
+
         
     };
     if(message.content.startsWith(prefix + 'ban')) {
