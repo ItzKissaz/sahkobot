@@ -25,8 +25,8 @@ bot.on('message', async message => {
         message.author.sendMessage("Working :)");
         message.author.sendMessaege("Servers: " + bot.servers.size + "xd");
         message.author.react("👍");
-        message.react("👎");
-        message.pin();
+        message.channel.react("👎");
+        message.react("👌");
         };
               
               
