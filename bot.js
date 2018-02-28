@@ -26,7 +26,7 @@ bot.on('message', async message => {
     
 
         
-    };
+    
     if(message.content.startsWith(prefix + 'admin test')) {
         message.author.sendMessage('Ootko toiletti? Mul on vessahätä!');
         message.channel.sendMessage('Check your **Direct Messages**');
