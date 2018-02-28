@@ -25,9 +25,9 @@ bot.on('message', async message => {
         message.author.sendMessage("Working :)")
         message.author.sendMessaege("Servers: " + bot.servers.size + "xd")
         message.channel.sendMessge("Test").then(function (message) {
-              message.react("👍")
-              message.react("👎")
-              message.pin()
+              message.author.react("👍");
+              message.author.react("👎");
+              message.pin();
               
             }).catch(function() {
               //Something
