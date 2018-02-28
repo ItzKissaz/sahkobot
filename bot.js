@@ -20,22 +20,21 @@ bot.on('message', async message => {
         message.channel.sendMessage('Help command = **c!help**')
     };
      
-    if(message.content.startsWith(prefix + 'admin test')) {
-        message.channel.sendMessage('Check your **Direct Messages**');
-        message.author.sendMessage("Working :)");
-        message.author.sendMessaege("Servers: " + bot.servers.size + "xd");
-        message.author.react("👍");
-        message.channel.react("👎");
-        message.react("👌");
-        };
+   
               
               
     
 
         
     };
-    if(message.content.startsWith(prefix + 'ban')) {
-        message.channel.sendMessage('**ERROR:** __Command not done!__ \n@RaikaZ#0178 is so sorry');
+    if(message.content.startsWith(prefix + 'admin test')) {
+        message.author.sendMessage('Ootko toiletti? Mul on vessahätä!');
+        message.channel.sendMessage('Check your **Direct Messages**');
+        message.author.sendMessage("Working :)");
+        message.author.sendMessaege("Servers: " + bot.servers.size + "xd");
+        message.author.react("👍");
+        message.channel.react("👎");
+        message.react("👌");
     };
 
     
