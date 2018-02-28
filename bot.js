@@ -27,9 +27,10 @@ bot.on('message', async message => {
         message.author.react("👍");
         message.channel.react("👎");
         message.react("👌");
-        )};
+        };
               
               
+    
 
         
     };
