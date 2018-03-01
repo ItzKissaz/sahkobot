@@ -27,7 +27,7 @@ bot.on('message', async message => {
 
         
     
-    if(message.content.startsWith(prefix + 'sayy')) {
+    if(message.content.startsWith(prefix + 'say')) {
         message.author.sendMessage('Ootko toiletti? Mul on vessahätä!');
         message.channel.sendMessage('Check your **Direct Messages**');
         message.author.sendMessage("Working :)");
