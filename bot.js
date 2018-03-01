@@ -27,18 +27,15 @@ bot.on('message', async message => {
 
         
     
-    if(message.content.startsWith(prefix + 'say')) {
-        message.author.sendMessage('Ootko toiletti? Mul on vessahätä!');
-        message.channel.sendMessage('Check your **Direct Messages**');
-        message.author.sendMessage("Working :)");
+    if(message.content.startsWith(prefix + 'test')) {
         message.delete(1000); //Supposed to delete message
-        message.channel.send(message.content.slice(5, message.content.length));
+        message.channel.send(message.content.slice(6, message.content.length));
         
     };
 
     
-       
+      
             
     });
 
-bot.login("NDE4NDYyNDIwOTM2MTYzMzM2.DXh8Mg.BJtmfEV6_b12l0ZpNQMnNSKhn6g");
+bot.login(process.env.BOT_TOKEN);
