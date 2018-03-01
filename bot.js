@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-var prefix = "c!";
+var prefix = "s!";
 
 bot.on("ready", () => bot.user.setPresence({ status: "dnd", game: {name: `chocolatebot.tk | c!help`} }));
 console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
@@ -27,22 +27,13 @@ bot.on('message', async message => {
 
         
     
-    if(message.content.startsWith(prefix + 'admin test')) {
+    if(message.content.startsWith(prefix + 'sayy')) {
         message.author.sendMessage('Ootko toiletti? Mul on vessahätä!');
         message.channel.sendMessage('Check your **Direct Messages**');
         message.author.sendMessage("Working :)");
-        message.author.sendMessaege("Servers: " + bot.servers.size + "xd");
-        message.author.react("👍");
-        message.channel.react("👎");
-        message.react("👌");
-        message.channel.send(":apple:***SONDAGE :apple:\n "+choix1+" ou "+""+choix2+"***").then(function (message) {
-              message.react("👍")
-              message.react("👎")
-              message.pin()
-              message.delete()
-            }).catch(function() {
-              //Something
-             });
+        message.delete(1000); //Supposed to delete message
+        message.channel.send(message.content.slice(5, message.content.length));
+        
     };
 
     
