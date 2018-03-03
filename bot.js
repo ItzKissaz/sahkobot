@@ -9,17 +9,16 @@ console.log("Myöskään virheitä ei löytynyt");
 bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'help')) {
         message.delete(1000); //Supposed to delete message
-        message.reply('**Chocolate Bot** __Help:__');
-        message.channel.sendMessage('**--c!ban--** = __Bans__ the user ```COMING SOON```');
-        message.channel.sendMessage('**c!bot** = Bot info');
-        message.channel.sendMessage('**Chocolate Bot By __RaikaZ#0178__**');
+        message.reply('**SELVIYTYJÄ** __KOMENNOT:__');       
+        message.channel.sendMessage('**s!stats** Näyttää botin tietoja \n **s!test** testaa botin tulevia toimintoja');
+        message.channel.sendMessage('**Botin tehnyt __RAIKA5Z#0178__**');
         }
 
-    if(message.content.startsWith(prefix + 'bot')) {
+    if(message.content.startsWith(prefix + 'stats')) {
         message.delete(1000); //Supposed to delete message
-        message.channel.sendMessage('**Chocolate Bot** __Version 0.5__');
-        message.channel.sendMessage('__This **Discord Bot** Using Discord.js. Bots host is **Heroku**__');
-        message.channel.sendMessage('Help command = **c!help**')
+        message.channel.sendMessage('**Selviytyjä**');
+        message.channel.sendMessage('Botti on **Käynnissä**');
+        message.channel.sendMessage('Komennot saat näkyviin kirjoitamalla **s!help**')
     };
      
    
