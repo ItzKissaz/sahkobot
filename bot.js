@@ -31,13 +31,13 @@ bot.on('message', async message => {
     
     if(message.content.startsWith(prefix + 'test')) {
         message.delete(1000); //Supposed to delete message
-        message.channel.send(message.content.slice("Minut laitettiin sanomaan:" + 6, message.content.length));
+        message.channel.send(message.content.slice(6, message.content.length));
         
     };
-    /*if(message.content.startsWith(prefix + 'varoitus')) {
+    if(message.content.startsWith(prefix + 'varoitus')) {
         message.delete(1000); //Supposed to delete message
-        message.channel.send(message.content.slice("Henkilöä varoitettu:" + 10, message.content.length));
-        *\
+        message.channel.send(message.content.slice("Henkilöä varoitettu" + 10, message.content.length));
+        
     };
     
 
