@@ -32,7 +32,11 @@ bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'test')) {
         message.delete(1000); //Supposed to delete message
         message.channel.send(message.content.slice(6, message.content.length));
-        bot.channels.get('417743747863019532').sendMessage('Moro')
+        bot.channels.get('417743747863019532').sendMessage(message.content.slice(10, message.content.lenght))
+    };
+    if(message.content.startsWith(prefix + 'ilmoitus')) {
+        message.delete(1000); //Supposed to delete message
+        bot.channels.get('417743747863019532').sendMessage(message.content.slice(10, message.content.lenght))
     };
     
     
