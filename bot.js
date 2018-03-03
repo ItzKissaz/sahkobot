@@ -8,6 +8,7 @@ console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
 console.log("Myöskään virheitä ei löytynyt");
 bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'help')) {
+        message.delete(1000); //Supposed to delete message
         message.reply('**Chocolate Bot** __Help:__');
         message.channel.sendMessage('**--c!ban--** = __Bans__ the user ```COMING SOON```');
         message.channel.sendMessage('**c!bot** = Bot info');
@@ -15,6 +16,7 @@ bot.on('message', async message => {
         }
 
     if(message.content.startsWith(prefix + 'bot')) {
+        message.delete(1000); //Supposed to delete message
         message.channel.sendMessage('**Chocolate Bot** __Version 0.5__');
         message.channel.sendMessage('__This **Discord Bot** Using Discord.js. Bots host is **Heroku**__');
         message.channel.sendMessage('Help command = **c!help**')
@@ -29,9 +31,15 @@ bot.on('message', async message => {
     
     if(message.content.startsWith(prefix + 'test')) {
         message.delete(1000); //Supposed to delete message
-        message.channel.send(message.content.slice(6, message.content.length));
+        message.channel.send(message.content.slice("Minut laitettiin sanomaan:" + 6, message.content.length));
         
     };
+    if(message.content.startsWith(prefix + 'varoitus')) {
+        message.delete(1000); //Supposed to delete message
+        message.channel.send(message.content.slice("Henkilöä varoitettu:" + 10, message.content.length));
+        
+    };
+    
 
     
       
