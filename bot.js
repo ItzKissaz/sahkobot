@@ -35,7 +35,9 @@ bot.on('message', async message => {
     };
     if(message.content.startsWith(prefix + 'ilmoitus')) {
         message.delete(1000); //Supposed to delete message
-        bot.channels.get('417743747863019532').sendMessage(message.content.slice(10, message.content.lenght))
+        bot.channels.get('417743747863019532').sendEmbed(ilmoitus)
+        var ilmoitus = new Discord.RichEmbed().setColor(0x0000FF).addField("ILMOITUS", message.content.slice(10, message.content.lenght))
+       
     };
     
     
