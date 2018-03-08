@@ -35,7 +35,7 @@ bot.on('message', async message => {
     };
     if(message.content.startsWith(prefix + 'ilmoitus')) {
         message.delete(1000); //Supposed to delete message
-        bot.channels.get('417743747863019532').sendMessage("Uusi ilmoitus", message.content.slice(10, message.content.lenght);
+        bot.channels.get('417743747863019532').sendMessage("Uusi ilmoitus", message.content.slice(10, message.content.lenght));
         
        
     };
