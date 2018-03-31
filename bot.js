@@ -1,24 +1,24 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-var prefix = "s!";
-
+var prefix = "o$";
+var test = 100;
 bot.on("ready", () => bot.user.setPresence({ status: "dnd", game: {name: `chocolatebot.tk | c!help`} }));
 console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
 console.log("Myöskään virheitä ei löytynyt");
 bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'help')) {
         message.delete(1000); //Supposed to delete message
-        message.reply('**SELVIYTYJÄ** __KOMENNOT:__');       
-        message.channel.sendMessage('**s!stats** Näyttää botin tietoja \n **s!test** testaa botin tulevia toimintoja');
-        message.channel.sendMessage('**Botin tehnyt __RAIKA5Z#0178__**');
+        message.reply('**Oweq** __Commands:__');       
+        message.channel.sendMessage('**o$bal** Send you Oweq Balance \n **o$payment <user> <value>** Pay Oweq money to other user'');
+        message.channel.sendMessage(');
         }
 
     if(message.content.startsWith(prefix + 'stats')) {
         message.delete(1000); //Supposed to delete message
-        message.channel.sendMessage('**Selviytyjä**');
-        message.channel.sendMessage('Botti on **Käynnissä**');
-        message.channel.sendMessage('Komennot saat näkyviin kirjoitamalla **s!help**')
+        message.channel.sendMessage('**Oweq Bot Status**');
+        message.channel.sendMessage('Bot is **IDLING**');
+        message.channel.sendMessage('IDLE = Test version \n ONLINE = Viral version')
     };
      
    
