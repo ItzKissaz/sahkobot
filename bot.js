@@ -48,11 +48,15 @@ bot.on('message', async message => {
     }
     if(message.content.startsWith(prefix + 'setbal')) {
         message.delete(1000); //Supposed to delete message
-        var test = message.content.slice(8, 12);
-        message.channel.sendMessage('Balance is' +  message.content.slice(8, 12) ).then(msg => {
+        var test = message.content.slice(9, 13);
+        message.channel.sendMessage('Balance is' +  message.content.slice(9, 13) ).then(msg => {
             msg.delete(10000)
             
             }).catch();
+        if(test > 1000) {
+            message.channel.sendMessage("Cant set balance 1000+";
+            var test = 1000;                         
+        }
     };
     if(message.content.startsWith(prefix + 'verify')) {
         message.delete(1000); //Supposed to delete message
