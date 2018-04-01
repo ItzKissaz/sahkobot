@@ -31,6 +31,9 @@ bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'test')) {
         message.delete(1000); //Supposed to delete message
         message.channel.send(message.content.slice(6, message.content.length));
+        message.reply('Invalid command').then(msg => {
+            msg.delete(10000)
+            }).catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
     };
     
     
