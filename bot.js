@@ -46,6 +46,14 @@ bot.on('message', async message => {
             msg.react("🤑");
             }).catch();
     }
+    if(message.content.startsWith(prefix + 'setbal')) {
+        message.delete(1000); //Supposed to delete message
+        var test = message.content.slice(8, 12);
+        message.channel.sendMessage('Balance is' +  message.content.slice(8, 12) ).then(msg => {
+            msg.delete(10000)
+            
+            }).catch();
+    };
     if(message.content.startsWith(prefix + 'verify')) {
         message.delete(1000); //Supposed to delete message
      
