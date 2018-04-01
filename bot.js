@@ -52,8 +52,6 @@ bot.on('message', async message => {
             
             }).catch();
         if(message.content.slice(9, 14) == verifycode) {
-            const guildMember = message.member;
-            guildMember.addRole('Verified');
             message.reply(" is now Verified").then(msg => {
                 msg.react("🤔");
                 }).catch();
