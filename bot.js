@@ -6,6 +6,7 @@ var test = 100;
 bot.on("ready", () => bot.user.setPresence({ status: "idle", game: {name: `chocolatebot.tk | c!help`} }));
 console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
 console.log("Myöskään virheitä ei löytynyt");
+var NewUsers = 0;
 bot.on("guildMemberAdd", (member) => {
   const guild = member.guild;
   newUsers.set(member.id, member.user);
