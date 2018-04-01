@@ -36,12 +36,12 @@ bot.on('message', async message => {
             
             }).catch();
     };
-    if(message.content.startsWith(prefix + 'balance')) {
+    if(message.content.startsWith(prefix + 'bal')) {
         message.delete(1000); //Supposed to delete message
         
         message.channel.sendMessage('Your balance is ' + test + '`O').then(msg => {
             msg.delete(10000)
-            msg.react("🤔");
+            msg.react("🤑");
             }).catch();
     };
     
