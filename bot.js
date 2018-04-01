@@ -38,7 +38,7 @@ bot.on('message', async message => {
     };
     if(message.content.startsWith(prefix + 'bal')) {
         message.delete(1000); //Supposed to delete messag
-        var embed = new Discord.RichEmbed().addField(message.author.username + " Stats", "Balance " + test + "/1000 Season 0").setColor(0x00ffff).setThumbnail(message.author.avatarURL)
+        var embed = new Discord.RichEmbed().addField(message.author.username + " Stats", "Balance " + test + " / 1000 Season 0").setColor(0x00ffff).setThumbnail(message.author.avatarURL)
         message.channel.sendEmbed(embed);
         console.log(message.author.username + ` Viewed their profile!`);
         message.channel.sendMessage('Your balance is ' + test + '`O').then(msg => {
@@ -48,8 +48,8 @@ bot.on('message', async message => {
     }
     if(message.content.startsWith(prefix + 'setbal')) {
         message.delete(1000); //Supposed to delete message
-        var test = message.content.slice(9, 13);
-        message.channel.sendMessage('Balance is' + test ).then(msg => {
+        var test = message.content.slice(9, 14);
+        message.channel.sendMessage('Balance is ' + test ).then(msg => {
             msg.delete(10000)
             
             }).catch();
