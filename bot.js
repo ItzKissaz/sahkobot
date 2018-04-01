@@ -55,7 +55,7 @@ bot.on('message', async message => {
             const guildMember = message.member;
             guildMember.addRole('Verified');
             message.reply(" is now Verified").then(msg => {
-            msg.react("🤔" or "👌");
+            msg.react("🤔");
             }).catch();
         }
     }
