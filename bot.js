@@ -28,12 +28,12 @@ bot.on('message', async message => {
 
         
     
-    if(message.content.startsWith(prefix + 'test')) {
+    if(message.content.startsWith(prefix + 'payment')) {
         message.delete(1000); //Supposed to delete message
         message.channel.send(message.content.slice(6, message.content.length));
-        message.reply('Invalid command').then(msg => {
+        message.channel.sendMessage('Payment of',  message.content.slice(9, 12), '`O is complete').then(msg => {
             msg.delete(10000)
-            }).catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
+            }).catch();
     };
     
     
