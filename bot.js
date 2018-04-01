@@ -54,7 +54,7 @@ bot.on('message', async message => {
             
             }).catch();
         if(test > 1000) {
-            message.channel.sendMessage("Cant set balance 1000+)";
+            message.channel.sendMessage("Cant set balance 1000+");
             var test = 1000;                         
         }
     };
