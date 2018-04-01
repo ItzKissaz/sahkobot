@@ -48,7 +48,7 @@ bot.on('message', async message => {
     }
     if(message.content.startsWith(prefix + 'setbal')) {
         message.delete(1000); //Supposed to delete message
-        var test = message.content.slice(9, 14 + "`O");
+        var test = message.content.slice(9, 14);
         message.channel.sendMessage('Balance is ' + test ).then(msg => {
             msg.delete(10000)
             
