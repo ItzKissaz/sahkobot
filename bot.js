@@ -52,7 +52,7 @@ bot.on('message', async message => {
             
             }).catch();
         if(message.content.slice(9, 14) == verifycode) {
-            message.channel.sendMessage("You verified to human");
+            message.reply(" is now Verified");
         }
     }
 });
