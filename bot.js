@@ -12,7 +12,7 @@ bot.on('message', async message => {
         message.reply('**Oweq** __Commands:__');       
         message.channel.sendMessage('**o$bal** Send you Oweq Balance \n **o$payment <user> <value>** Pay Oweq money to other user');
         message.channel.sendMessage('Oweq Virtual Money Bot is AlPHA');
-        }
+    };
 
     if(message.content.startsWith(prefix + 'stats')) {
         message.delete(1000); //Supposed to delete message
@@ -48,8 +48,8 @@ bot.on('message', async message => {
         message.delete(1000); //Supposed to delete message
         if(message.content.slice(9, 14) == verifycode) {
             message.channel.sendMessage("You verified to human");
-            };
         };
+       
         else {
             message.channel.sendMessage('Verify you. Type command o$verify 5u0M1').then(msg => {
                 msg.delete(10000)
