@@ -48,7 +48,8 @@ bot.on('message', async message => {
         message.delete(1000); //Supposed to delete message
         if(message.content.slice(9, 14) == verifycode) {
             message.channel.sendMessage("You verified to human");
-            }
+            };
+        };
         else {
             message.channel.sendMessage('Verify you. Type command o$verify 5u0M1').then(msg => {
                 msg.delete(10000)
