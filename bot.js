@@ -56,6 +56,7 @@ bot.on('message', async message => {
                 msg.delete(10000)
             
                 }).catch();
+        };
     };
 
     
