@@ -35,7 +35,7 @@ bot.on('message', async message => {
             msg.delete(10000)
             
             }).catch();
-    };
+    }
     if(message.content.startsWith(prefix + 'bal')) {
         message.delete(1000); //Supposed to delete message
         
@@ -43,18 +43,18 @@ bot.on('message', async message => {
             msg.delete(10000)
             msg.react("🤑");
             }).catch();
-    };
+    }
     if(message.content.startsWith(prefix + 'verify')) {
         message.delete(1000); //Supposed to delete message
         if(message.content.slice(9, 14) == verifycode) {
             message.channel.sendMessage("You verified to human");
-        };
+        }
        
         else {
             message.channel.sendMessage('Verify you. Type command o$verify 5u0M1').then(msg => {
                 msg.delete(10000)
             
                 }).catch();
-        };
-    };
+        }
+    }
 bot.login(process.env.BOT_TOKEN);
