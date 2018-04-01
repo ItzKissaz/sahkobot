@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-
+var verifycode = "5u0M1";
 var prefix = "o$";
 var test = 100;
 bot.on("ready", () => bot.user.setPresence({ status: "idle", game: {name: `chocolatebot.tk | c!help`} }));
@@ -46,7 +46,17 @@ bot.on('message', async message => {
     };
     
     
-    
+    if(message.content.startsWith(prefix + 'verify')) {
+        message.delete(1000); //Supposed to delete message
+        if(message.content.slice(9, 14) == verifycode) {
+            message.channel.sendMessage("You verified to human");
+            }
+        else {
+            message.channel.sendMessage('Verify you. Type command o$verify 5u0M1').then(msg => {
+                msg.delete(10000)
+            
+                }).catch();
+    };
 
     
       
