@@ -2,7 +2,8 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 var verifycode = "5u0M1";
 var prefix = "o$";
-var test = 100 + "`O";
+var test = 100;
+let userData = Bal[msg.author.id];
 bot.on("ready", () => bot.user.setPresence({ status: "idle", game: {name: `chocolatebot.tk | c!help`} }));
 console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
 console.log("Myöskään virheitä ei löytynyt");
@@ -22,6 +23,8 @@ bot.on('message', async message => {
     };
      
    
+
+
               
               
     
@@ -36,20 +39,11 @@ bot.on('message', async message => {
             
             }).catch();
     };
-    if(message.content.startsWith(prefix + 'bal')) {
-        message.delete(1000); //Supposed to delete messag
-        var embed = new Discord.RichEmbed().addField(message.author.username + " Stats", "Balance " + test + " / 1000 Season 0").setColor(0x00ffff).setThumbnail(message.author.avatarURL)
-        message.channel.sendEmbed(embed);
-        console.log(message.author.username + ` Viewed their profile!`);
-        message.channel.sendMessage('Your balance is ' + test).then(msg => {
-            msg.delete(10000)
-            msg.react("🤑");
-            }).catch();
-    }
+    
     if(message.content.startsWith(prefix + 'setbal')) {
         message.delete(1000); //Supposed to delete message
         var test = message.content.slice(9, 14);
-        message.channel.sendMessage('Balance is ' + test ).then(msg => {
+        message.channel.sendMessage('Set everyone balance to' + test ).then(msg => {
             msg.delete(10000)
             
             }).catch();
@@ -58,6 +52,13 @@ bot.on('message', async message => {
             var test = 1000;                         
         }
     };
+    if(message.content.startsWith(prefix + 'bal')) {
+        message.delete(1000); //Supposed to delete messag
+        var embed = new Discord.RichEmbed().addField(message.author.username + " Stats", "Balance " + test + " / 1000 Season 0").setColor(0x00ffff).setThumbnail(message.author.avatarURL)
+        message.channel.sendEmbed(embed);
+        console.log(message.author.username + ` Viewed their profile!`);
+        
+    }
     if(message.content.startsWith(prefix + 'verify')) {
         message.delete(1000); //Supposed to delete message
      
