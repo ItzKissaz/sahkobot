@@ -30,7 +30,7 @@ bot.on('message', async message => {
     
     if(message.content.startsWith(prefix + 'payment')) {
         message.delete(1000); //Supposed to delete message
-        ));
+        
         message.channel.sendMessage('Payment of' +  message.content.slice(9, 12) + '`O is complete').then(msg => {
             msg.delete(10000)
             }).catch();
