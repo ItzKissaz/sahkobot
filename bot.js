@@ -44,5 +44,5 @@ bot.on('message', async message => {
             msg.react("🤑");
             }).catch();
     }
-};
+});
 bot.login(process.env.BOT_TOKEN);
