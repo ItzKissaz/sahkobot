@@ -8,15 +8,12 @@ console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
 console.log("Myöskään virheitä ei löytynyt");
 var NewUsers = 0;
 bot.on("guildMemberAdd", (member) => {
-  const guild = member.guild;
-  newUsers.set(member.id, member.user);
-
-  if (newUsers.size > 10) {
-    const defaultChannel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"));
-    const userlist = newUsers.map(u => u.toString()).join(" ");
-    defaultChannel.send("Welcome our new users!\n" + userlist);
-    newUsers.clear();
-  }
+  const defaultChannel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES")
+  defaultChannel.sendMessage("Welcome to using Oweq Crypto money");
+});
+bot.on("guildMemberRemove", (member) => {
+  const defaultChannel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES")
+  defaultChannel.sendMessage("Someone leave/ban/kock");
 });
 bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'help')) {
