@@ -13,8 +13,7 @@ bot.on("guildMemberAdd", (member) => {
   defaultChannel.sendMessage("Welcome to using Oweq Crypto money");
 });
 bot.on("guildMemberRemove", (member) => {
-  const defaultChannel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"));
-  defaultChannel.sendMessage("Someone leave/ban/kock");
+    discord.GetTextChannel(channelid).SendMessageAsync("message")
 });
 bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'help')) {
