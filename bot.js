@@ -20,11 +20,7 @@ const fs = require("fs");
 
 var userData = JSON.parse(fs.readFileSync("./saldo.json", "utf8"));
 
-if (userData[sender.id]) userData[sender.id] = {
-    OweqBalance: 0
-    }
-userData[sender.id].OweqBalance++;
-fs.writeFile('./saldo.json');
+
 bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'help')) {
         message.delete(1000); //Supposed to delete message
@@ -32,7 +28,11 @@ bot.on('message', async message => {
         message.channel.sendMessage('**o$bal** Send you Oweq Balance \n **o$payment <user> <value>** Pay Oweq money to other user');
         message.channel.sendMessage('Oweq Virtual Money Bot is AlPHA');
     };
-
+    if (userData[sender.id]) userData[sender.id] = {
+        OweqBalance: 0
+    }
+    userData[sender.id].OweqBalance++;
+    fs.writeFile('./saldo.json');
     if(message.content.startsWith(prefix + 'stats')) {
         message.delete(1000); //Supposed to delete message
         message.channel.sendMessage('**Oweq Bot Status**');
