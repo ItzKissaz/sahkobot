@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+)const Discord = require('discord.js');
 const bot = new Discord.Client();
 var verifycode = "5u0M1";
 var prefix = "o$";
@@ -8,11 +8,11 @@ console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
 console.log("Myöskään virheitä ei löytynyt");
 var NewUsers = 0;
 bot.on("guildMemberAdd", (member) => {
-  const defaultChannel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES")
+  const defaultChannel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"));
   defaultChannel.sendMessage("Welcome to using Oweq Crypto money");
 });
 bot.on("guildMemberRemove", (member) => {
-  const defaultChannel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES")
+  const defaultChannel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"));
   defaultChannel.sendMessage("Someone leave/ban/kock");
 });
 bot.on('message', async message => {
