@@ -16,12 +16,12 @@ bot.on("guildMemberRemove", (member) => {
         
 });
 const fs = require("fs");
-const client = new Discord.Client();
+
 
 let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
 
 
-client.on("message", message => {
+bot.on("message", message => {
   if (!message.content.startsWith(prefix)) return;
   if (message.author.bot) return;
 
