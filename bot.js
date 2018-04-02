@@ -18,7 +18,7 @@ bot.on("guildMemberRemove", (member) => {
 const fs = require("fs");
 
 
-var saldo = JSON.parse(fs.readFileSync("./saldo.json", "utf8"));
+var userData = JSON.parse(fs.readFileSync("./saldo.json", "utf8"));
 
 if (userData[sender.id]) userData[sender.id] = {
     OweqBalance: 0
