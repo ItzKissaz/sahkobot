@@ -28,10 +28,10 @@ bot.on('message', async message => {
         message.channel.sendMessage('**o$bal** Send you Oweq Balance \n **o$payment <user> <value>** Pay Oweq money to other user');
         message.channel.sendMessage('Oweq Virtual Money Bot is AlPHA');
     };
-    if (userData[author.id]) userData[sender.id] = {
+    if (userData[message.author.id]) userData[sender.id] = {
         OweqBalance: 0
     }
-    userData[author.id].OweqBalance++;
+    userData[message.author.id].OweqBalance++;
     fs.writeFile('./saldo.json', JSON.stringify(userData), (err)=> {
         if (err) console.error(err);
         });
