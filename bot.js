@@ -12,7 +12,8 @@ bot.on("guildMemberAdd", (member) => {
     bot.GetTextChannel(channelid).SendMessageAsync("JOINMESSAGE HERE")
 });
 bot.on("guildMemberRemove", (member) => {
-    bot.GetTextChannel(channelid).SendMessageAsync("LEAVEMESSAGE HERE")
+    bot.channels.get(channelid).sendMessage("LEAVEMESSAGE HERE");
+        
 });
 bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'help')) {
