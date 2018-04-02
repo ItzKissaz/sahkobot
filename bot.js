@@ -32,7 +32,7 @@ bot.on('message', async message => {
         OweqBalance: 0
     }
     userData[author.id].OweqBalance++;
-    fs.writeFile('./saldo.json', JSON.stringify(userData), (err)= > {
+    fs.writeFile('./saldo.json', JSON.stringify(userData), (err)=> {
         if (err) console.error(err);
         });
     if(message.content.startsWith(prefix + 'stats')) {
