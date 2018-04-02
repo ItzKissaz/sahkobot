@@ -24,6 +24,7 @@ if (userData[sender.id]) userData[sender.id] = {
     OweqBalance: 0
     }
 userData[sender.id].OweqBalance++;
+fs.writeFile('./saldo.json');
 bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'help')) {
         message.delete(1000); //Supposed to delete message
