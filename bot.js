@@ -9,10 +9,10 @@ console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
 console.log("Myöskään virheitä ei löytynyt");
 var NewUsers = 0;
 bot.on("guildMemberAdd", (member) => {
-    discord.GetTextChannel(channelid).SendMessageAsync("JOINMESSAGE HERE")
+    bot.GetTextChannel(channelid).SendMessageAsync("JOINMESSAGE HERE")
 });
 bot.on("guildMemberRemove", (member) => {
-    discord.GetTextChannel(channelid).SendMessageAsync("LEAVEMESSAGE HERE")
+    bot.GetTextChannel(channelid).SendMessageAsync("LEAVEMESSAGE HERE")
 });
 bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'help')) {
