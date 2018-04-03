@@ -7,7 +7,7 @@ var channelid = "429657656614060032";
 bot.on("ready", () => bot.user.setPresence({ status: "idle", game: {name: `chocolatebot.tk | c!help`} }));
 console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
 console.log("Myöskään virheitä ei löytynyt");
-bot.setgame("with Money");
+bot.setGame("with Money");
 var NewUsers = 0;
 bot.on("guildMemberAdd", (member) => {
     bot.GetTextChannel(channelid).SendMessageAsync("JOINMESSAGE HERE")
