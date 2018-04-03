@@ -7,6 +7,7 @@ var channelid = "429657656614060032";
 bot.on("ready", () => bot.user.setPresence({ status: "idle", game: {name: `chocolatebot.tk | c!help`} }));
 console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
 console.log("Myöskään virheitä ei löytynyt");
+bot.setgame("with Money");
 var NewUsers = 0;
 bot.on("guildMemberAdd", (member) => {
     bot.GetTextChannel(channelid).SendMessageAsync("JOINMESSAGE HERE")
@@ -28,7 +29,7 @@ bot.on('message', async message => {
         message.channel.sendMessage('**o$bal** Send you Oweq Balance \n **o$payment <user> <value>** Pay Oweq money to other user');
         message.channel.sendMessage('Oweq Virtual Money Bot is AlPHA');
     };
-    if (userData[message.author.id]) userData[sender.id] = {
+    if (userData[message.author.id]) userData[message.author.id] = {
         OweqBalance: 0
     }
     userData[message.author.id].OweqBalance++;
