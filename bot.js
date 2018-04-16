@@ -92,6 +92,14 @@ bot.on('message', async message => {
             
             }).catch();
         if(message.content.slice(9, 14) == verifycode) {
+            let role = message.guild.roles.find("name", "Verified");
+
+
+// or the person who made the command: let member = message.member;
+
+// Add the role!
+            sender.addRole(role).catch(console.error);
+
             message.reply(" is now Verified").then(msg => {
                 msg.react("🤔");
                 }).catch();
