@@ -41,7 +41,7 @@ bot.on('message', async message => {
         message.channel.sendMessage('**Status**');
         message.channel.send("**Members:** ${guild.memberCount}");
     
-        message.channel.sendMessage('**Servers:** ${bot.guilds.size}')
+        message.channel.sendMessage("**Servers:**" + `${bot.guilds.size}`)
         message.channel.sendMessage('Your ping is `' + `${message.createdTimestamp - Date.now()}` + ' ms`');
     
     };
