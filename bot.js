@@ -87,11 +87,11 @@ bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'verify')) {
         message.delete(1000); //Supposed to delete message
      
-        message.channel.sendMessage('Verify you. Type command o$verify 5u0M1').then(msg => {
+        message.channel.sendMessage('Verify you. Type command ,verify 5u0M1').then(msg => {
             msg.delete(10000)
             
             }).catch();
-        if(message.content.slice(9, 14) == verifycode) {
+        if(message.content.slice(8, 13) == verifycode) {
             let role = message.guild.roles.find("name", "Verified");
 
 
