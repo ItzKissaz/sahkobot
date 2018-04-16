@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 var verifycode = "5u0M1";
-var prefix = "o$";
+var prefix = ",";
 var test = 100;
-var channelid = "429657656614060032";
+var channelid = "435140636631367712";
 var sender = "message.author";
-bot.on("ready", () => bot.user.setPresence({ status: "idle", game: {name: `chocolatebot.tk | c!help`} }));
+bot.setgame("Moi");
 console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
 console.log("Myöskään virheitä ei löytynyt");
 var NewUsers = 0;
@@ -21,7 +21,7 @@ bot.on("guildMemberRemove", (member) => {
 bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'help')) {
         message.delete(1000); //Supposed to delete message
-        message.reply('**Oweq** __Commands:__');       
+        message.reply('**RatTheRotten** __Commands:__');       
         message.channel.sendMessage('**o$bal** Send you Oweq Balance \n **o$payment <user> <value>** Pay Oweq money to other user');
         message.channel.sendMessage('Oweq Virtual Money Bot is AlPHA');
     };
