@@ -10,16 +10,12 @@ console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
 console.log("Myöskään virheitä ei löytynyt");
 var NewUsers = 0;
 bot.on("guildMemberAdd", (member) => {
-    bot.GetTextChannel(channelid).SendMessageAsync("JOINMESSAGE HERE")
+    bot.GetTextChannel(channelid).SendMessageAsync("New member joined")
 });
 bot.on("guildMemberRemove", (member) => {
-    bot.channels.get(channelid).sendMessage("LEAVEMESSAGE HERE");
+    bot.channels.get(channelid).sendMessage("Member left.");
         
 });
-const fs = require("fs");
-
-
-var userData = JSON.parse(fs.readFileSync("./saldo.json", "utf8"));
 
 
 bot.on('message', async message => {
@@ -29,18 +25,13 @@ bot.on('message', async message => {
         message.channel.sendMessage('**o$bal** Send you Oweq Balance \n **o$payment <user> <value>** Pay Oweq money to other user');
         message.channel.sendMessage('Oweq Virtual Money Bot is AlPHA');
     };
-    if (!userData[message.author.id]) userData[message.author.id] = {
-        OweqBalance: 0
-    }
-    userData[message.author.id].OweqBalance++;
-    fs.writeFile('./saldo.json', JSON.stringify(userData), (err)=> {
-        if (err) console.error(err);
-        });
     if(message.content.startsWith(prefix + 'stats')) {
         message.delete(1000); //Supposed to delete message
-        message.channel.sendMessage('**Oweq Bot Status**');
+        message.channel.sendMessage('**RatTheRotten Bot Status**');
         message.channel.sendMessage('Bot is **IDLING**');
-        message.channel.sendMessage('IDLE = Test version \n ONLINE = Viral version')
+        message.channel.sendMessage('IDLE = Test version \nONLINE = Viral version')
+        message.channel.sendMessage('Your ping is `' + `${message.createdTimestamp - Date.now()}` + ' ms`');
+    
     };
      
    
