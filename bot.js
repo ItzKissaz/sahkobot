@@ -17,21 +17,21 @@ bot.on("guildMemberRemove", (member) => {
     bot.channels.get(channelid).sendMessage("Member left.");
         
 });
-client.on("guildCreate", guild => {
+bot.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setActivity(`Serving ${client.guilds.size} servers`);
+  
 });
 
-client.on("guildDelete", guild => {
+bot.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setActivity(`Serving ${client.guilds.size} servers`);
 });
 
 bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'help')) {
         message.delete(1000); //Supposed to delete message
+        message.channel.send("Im on ${bot.guilds.size} servers!")
         message.reply('**RatTheRotten** __Commands:__');       
         message.channel.sendMessage('**o$bal** Send you Oweq Balance \n **o$payment <user> <value>** Pay Oweq money to other user');
         message.channel.sendMessage('Oweq Virtual Money Bot is AlPHA');
