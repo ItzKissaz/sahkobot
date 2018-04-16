@@ -39,7 +39,7 @@ bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'stats')) {
         message.delete(1000); //Supposed to delete message
         message.channel.sendMessage('**Status**');
-        message.channel.send("**Members:**" + `${guild.memberCount}`);
+        
     
         message.channel.sendMessage("**Servers:**" + `${bot.guilds.size}`)
         message.channel.sendMessage('Your ping is `' + `${message.createdTimestamp - Date.now()}` + ' ms`');
@@ -79,7 +79,7 @@ bot.on('message', async message => {
     };
     if(message.content.startsWith(prefix + 'bal')) {
         message.delete(1000); //Supposed to delete messag
-        var embed = new Discord.RichEmbed().addField(message.author.username + " Stats", "Balance " + userData[message.author.id].OweqBalance + " / 1000 Season 0").setColor(0x00ffff).setThumbnail(message.author.avatarURL)
+        var embed = new Discord.RichEmbed().addField(message.author.username + "").setColor(0x00ffff).setThumbnail(message.author.avatarURL)
         message.channel.sendEmbed(embed);
         console.log(message.author.username + ` Viewed their profile!`);
         
