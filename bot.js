@@ -36,6 +36,15 @@ bot.on('message', async message => {
         message.channel.sendMessage('**o$bal** Send you Oweq Balance \n **o$payment <user> <value>** Pay Oweq money to other user');
         message.channel.sendMessage('Oweq Virtual Money Bot is AlPHA');
     };
+    if (message.content.startsWith(prefix + 'cat')) {
+		try {
+			get('https://random.cat/meow').then(response => {
+				message.channel.send({files: [{attachment: response.body.file, name: `cat.${response.body.file.split('.')[2]}`}]});
+			});
+		} catch (e) {
+			return message.channel.send(e.stack);
+		}
+	};
     if(message.content.startsWith(prefix + 'stats')) {
         message.delete(1000); //Supposed to delete message
         message.channel.sendMessage('**Status**');
