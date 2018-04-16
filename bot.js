@@ -38,9 +38,10 @@ bot.on('message', async message => {
     };
     if(message.content.startsWith(prefix + 'stats')) {
         message.delete(1000); //Supposed to delete message
-        message.channel.sendMessage('**RatTheRotten Bot Status**');
-        message.channel.sendMessage('Bot is **IDLING**');
-        message.channel.sendMessage('IDLE = Test version \nONLINE = Viral version')
+        message.channel.sendMessage('**Status**');
+        message.channel.send("**Members:** ${guild.memberCount}");
+    
+        message.channel.sendMessage('**Servers:** ${bot.guilds.size}')
         message.channel.sendMessage('Your ping is `' + `${message.createdTimestamp - Date.now()}` + ' ms`');
     
     };
