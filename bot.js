@@ -5,6 +5,7 @@ var prefix = ",";
 var test = 100;
 var channelid = "435140636631367712";
 var sender = "message.author";
+var client = "bot";
 client.user.setPresence({ game: { name: 'yourGameGoesHere', type: 0 } });
 console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
 console.log("Myöskään virheitä ei löytynyt");
