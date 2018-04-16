@@ -39,7 +39,7 @@ bot.on('message', async message => {
     if(message.content.startsWith(prefix + 'stats')) {
         message.delete(1000); //Supposed to delete message
         message.channel.sendMessage('**Status**');
-        message.channel.send("**Members:** ${guild.memberCount}");
+        message.channel.send("**Members:**" + `${guild.memberCount}`);
     
         message.channel.sendMessage("**Servers:**" + `${bot.guilds.size}`)
         message.channel.sendMessage('Your ping is `' + `${message.createdTimestamp - Date.now()}` + ' ms`');
