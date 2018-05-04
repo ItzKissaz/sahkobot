@@ -38,7 +38,7 @@ bot.on('message', async message => {
                 
                
                 
-            message.channel.send(":wave: " + member.displayName + "Kickattiin onnistuneesti :point_right: ");
+            message.channel.send(":wave: " + member.displayName + " Kickattiin onnistuneesti.  ");
             }).catch(() => {
              // Failmessage
                 message.channel.send("Yritys evätty");
@@ -55,8 +55,9 @@ bot.on('message', async message => {
                 
                 
                 
-        }else:
-           message.channel.send("Sinä et voi Kickata poukkaa")
+        }else{
+           message.channel.send("Sinä et voi Kickata porukkaa")
+           };
     }
     if(message.content.startsWith(prefix + 'help')) {
         message.delete(1000); //Supposed to delete message
