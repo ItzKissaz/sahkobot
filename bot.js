@@ -15,7 +15,7 @@ bot.on('message', async message => {
     
     if(message.content.startsWith(prefix + 'help')) {
         message.delete(1000); //Supposed to delete message
-        message.sendMessage('**Justelius** Ohjeet \n**Kehitän bottia kun ehdin. Komennot ovat saatavilla vain ylläpitäjille');       
+        message.channel.sendMessage('**Justelius** Ohjeet \n**Kehitän bottia kun ehdin. Komennot ovat saatavilla vain ylläpitäjille');       
         };
       
     if(message.content.startsWith(prefix + '8ball')) {
