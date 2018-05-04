@@ -15,7 +15,12 @@ function doMagic8Ball() {
 
     return rand[Math.floor(Math.random()*rand.length)];
 }
-
+bot.on('messageReactionAdd', (reaction, user) => {
+    if(reaction.emoji.name === "✅") {
+        var randomwinner = ""
+        console.log(reaction.users);
+    }
+});
 bot.on('message', async message => {
     if (message.content.startsWith(prefix + "kick")) {
         // Easy way to get member object though mentions.
