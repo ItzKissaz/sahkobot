@@ -27,7 +27,7 @@ bot.on('message', async message => {
         let adminRole = message.guild.roles.find("name", "Ylläpito");
    
 
-        if(message.member.roles.has(adminRole) || message.member.roles.has(adminRole)){
+        if(message.member.roles.has(adminRole.id){
        
         
             var member = message.mentions.members.first();
