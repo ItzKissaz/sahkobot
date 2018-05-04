@@ -26,6 +26,7 @@ bot.on('message', async message => {
         function getRandomArbitrary() {
             let vastaus = Math.random() * vastaukset.lenght;
         }
+        getRandomArbitrary();
         message.channel.sendMessage('8 Pallo on päättänyt vastauksensa: **' + vastaukset[vastaus] + '**')
         
     };
