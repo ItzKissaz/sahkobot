@@ -41,8 +41,7 @@ bot.on('message', async message => {
             message.channel.send(":wave: " + member.displayName + "Kickattiin onnistuneesti :point_right: ");
             }).catch(() => {
              // Failmessage
-                message.c
-                hannel.send("Yritys evätty");
+                message.channel.send("Yritys evätty");
             });
                 
                 
@@ -56,8 +55,7 @@ bot.on('message', async message => {
                 
                 
                 
-        };
-        else:
+        }else:
            message.channel.send("Sinä et voi Kickata poukkaa")
     }
     if(message.content.startsWith(prefix + 'help')) {
