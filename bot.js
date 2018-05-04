@@ -41,10 +41,24 @@ bot.on('message', async message => {
             message.channel.send(":wave: " + member.displayName + "Kickattiin onnistuneesti :point_right: ");
             }).catch(() => {
              // Failmessage
-                message.channel.send("Yritys evätty");
-            })else:
-                message.channel.send("Sinulla ei ole tarittavaa oikeutta");
+                message.c
+                hannel.send("Yritys evätty");
+            });
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
         };
+        else:
+           message.channel.send("Sinä et voi Kickata poukkaa")
     }
     if(message.content.startsWith(prefix + 'help')) {
         message.delete(1000); //Supposed to delete message
