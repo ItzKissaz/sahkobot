@@ -17,7 +17,18 @@ function doMagic8Ball() {
 }
 
 bot.on('message', async message => {
-    
+    if (message.content.startsWith(prefix + "kick")) {
+        // Easy way to get member object though mentions.
+        var member = message.mentions.members.first();
+        // Kick
+        member.kick().then((member) => {
+            // Successmessage
+            message.channel.send(":wave: " + member.displayName + "Kickattiin onnistuneesti :point_right: ");
+        }).catch(() => {
+             // Failmessage
+            message.channel.send("Yritys evätty");
+        });
+    }
     if(message.content.startsWith(prefix + 'help')) {
         message.delete(1000); //Supposed to delete message
         message.channel.sendMessage('**Justelius** Ohjeet \n**Kehitän bottia kun ehdin. Komennot ovat saatavilla vain ylläpitäjille');       
