@@ -24,15 +24,27 @@ bot.on('messageReactionAdd', (reaction, user) => {
 bot.on('message', async message => {
     if (message.content.startsWith(prefix + "kick")) {
         // Easy way to get member object though mentions.
-        var member = message.mentions.members.first();
+        let adminRole = message.guild.roles.find("name", "Ylläpito");
+   
+
+        if(message.member.roles.has(adminRole) || message.member.roles.has(modRole)){
+       
+        
+            var member = message.mentions.members.first();
         // Kick
-        member.kick().then((member) => {
+            member.kick().then((member) => {
             // Successmessage
+             
+                
+               
+                
             message.channel.send(":wave: " + member.displayName + "Kickattiin onnistuneesti :point_right: ");
-        }).catch(() => {
+            }).catch(() => {
              // Failmessage
-            message.channel.send("Yritys evätty");
-        });
+                message.channel.send("Yritys evätty");
+            });
+        })else:
+            message.channel.send("Sinulla ei ole tarittavaa oikeutta");
     }
     if(message.content.startsWith(prefix + 'help')) {
         message.delete(1000); //Supposed to delete message
