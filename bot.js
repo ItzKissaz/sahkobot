@@ -21,9 +21,9 @@ bot.on('message', async message => {
     if(message.content.startsWith(prefix + '8ball')) {
         message.delete(1000); //Supposed to delete message
         message.channel.sendMessage('**8BALL**');
-        message.channel.sendMessage('Kysyit viisaalta 8 Pallolta kysymyksen: **' + message.content.slice(7, message.content.lenght) + '**');
+        message.channel.sendMessage('Kysyit viisaalta 8 Pallolta kysymyksen: **' + message.content.slice(8, message.content.lenght) + '**');
         var vastaus = "Kyllä" || "Ehkä ei" || "Ei" || "Ei missään nimessä";
-        message.channel.sendMessage('8 Pallo on päättänyt vastauksensa. **' + vastaus + '**')
+        message.channel.sendMessage('8 Pallo on päättänyt vastauksensa: **' + vastaus + '**')
         
     };
             });
