@@ -16,7 +16,8 @@ function doMagic8Ball() {
     return rand[Math.floor(Math.random()*rand.length)];
 }
 bot.on("guildMemberAdd", function (server, user) {
-           bot.addMemberToRole(user, server.roles.get("name", "Käyttäjä"), function (err) { if (err) console.log(err) })
+    bot.addMemberToRole(user, server.roles.get("name", "Käyttäjä"), function (err) { if (err) console.log(err) })
+    });
 bot.on('message', async message => {
     
     if(message.content.startsWith(prefix + 'help')) {
