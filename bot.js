@@ -23,7 +23,7 @@ bot.on('message', async message => {
         message.channel.sendMessage('**8BALL**');
         message.channel.sendMessage('Kysyit viisaalta 8 Pallolta kysymyksen: **' + message.content.slice(8, message.content.lenght) + '**');
         let vastaukset = ["Kyllä", "Ehkä ei", "Ei", "Ei missään nimessä"];
-        function getRandomArbitrary(min, max) {
+        function getRandomArbitrary() {
             let vastaus = Math.random() * vastaukset.lenght;
         }
         message.channel.sendMessage('8 Pallo on päättänyt vastauksensa: **' + vastaukset[vastaus] + '**')
