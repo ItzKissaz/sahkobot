@@ -42,9 +42,9 @@ bot.on('message', async message => {
             }).catch(() => {
              // Failmessage
                 message.channel.send("Yritys evätty");
-            });
-        })else:
-            message.channel.send("Sinulla ei ole tarittavaa oikeutta");
+            })else:
+                message.channel.send("Sinulla ei ole tarittavaa oikeutta");
+        };
     }
     if(message.content.startsWith(prefix + 'help')) {
         message.delete(1000); //Supposed to delete message
