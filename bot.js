@@ -10,9 +10,12 @@ bot.on("ready", () => bot.user.setPresence({ status: "idle", game: { name: 'j!he
 console.log("Olen valmiina! Joona#1266 auttoi botin rakentamisessa.");
 console.log("Myöskään virheitä ei löytynyt");
 var NewUsers = 0;
-function getRandomArbitrary() {
-    return Math.random() * vastaukset.lenght;
-    }
+function doMagic8Ball() {
+    var rand = ['Kyllä', 'Ei', 'Ehkä ei...', 'Ei ikinä', 'Ehkä', 'Ehkä huomenna'];
+
+    return rand[Math.floor(Math.random()*rand.length)];
+}
+
 bot.on('message', async message => {
     
     if(message.content.startsWith(prefix + 'help')) {
@@ -26,7 +29,7 @@ bot.on('message', async message => {
         message.channel.sendMessage('Kysyit viisaalta 8 Pallolta kysymyksen: **' + message.content.slice(8, message.content.lenght) + '**');
         let vastaukset = ["Kyllä", "Ehkä ei", "Ei", "Ei missään nimessä"];
         let vastaus = "getRandomArbitrary();"
-        message.channel.sendMessage('8 Pallo on päättänyt vastauksensa: **' + vastaukset[vastaus] + '**')
+        message.channel.sendMessage('8 Pallo on päättänyt vastauksensa: **' + doMagic8Ball+ '**')
         
     };
             });
