@@ -22,8 +22,9 @@ bot.on('message', async message => {
         message.delete(1000); //Supposed to delete message
         message.channel.sendMessage('**8BALL**');
         message.channel.sendMessage('Kysyit viisaalta 8 Pallolta kysymyksen: **' + message.content.slice(8, message.content.lenght) + '**');
-        var vastaus = "Kyllä" || "Ehkä ei" || "Ei" || "Ei missään nimessä";
-        message.channel.sendMessage('8 Pallo on päättänyt vastauksensa: **' + vastaus + '**')
+        let vastaukset = ["Kyllä", "Ehkä ei", "Ei", "Ei missään nimessä"];
+        let vastaus = Math.floor((math.random() * vastaukset.lenght));
+        message.channel.sendMessage('8 Pallo on päättänyt vastauksensa: **' + vastaukset[vastaus] + '**')
         
     };
             });
