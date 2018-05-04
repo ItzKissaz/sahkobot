@@ -26,7 +26,7 @@ bot.on('message', async message => {
     if(message.content.startsWith(prefix + '8ball')) {
         message.delete(1000); //Supposed to delete message
         message.channel.sendMessage('**8BALL**');
-        message.channel.sendMessage(message.author.name + ' Kysyi viisaalta 8 Pallolta kysymyksen: **' + message.content.slice(8, message.content.lenght) + '**');
+        message.channel.sendMessage(message.author + ' Kysyi viisaalta 8 Pallolta kysymyksen: **' + message.content.slice(8, message.content.lenght) + '**');
         let vastaukset = ["Kyllä", "Ehkä ei", "Ei", "Ei missään nimessä"];
         let vastaus = "getRandomArbitrary();"
         message.channel.sendMessage('8 Pallo on päättänyt vastauksensa: **' + doMagic8Ball() + '**')
