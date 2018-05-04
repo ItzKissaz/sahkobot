@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 var verifycode = "5u0M1";
-var prefix = ",";
+var prefix = "j!";
 var test = 100;
 var channelid = "435140636631367712";
 var sender = "message.author";
