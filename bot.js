@@ -28,7 +28,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
     }
 });
 bot.on('message', async message => {
-    return message.author.bot;
+    if (message.author.bot) return;
     if (message.content.startsWith(prefix + "idea")) {
         if (message.content.slice(8, message.content.lenght) <= 2) {
             message.channel.send("Kerro ideasi meille tällä komenolla");
