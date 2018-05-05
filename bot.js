@@ -25,10 +25,10 @@ bot.on('message', async message => {
     if (message.content.startsWith(prefix + "idea")) {
         if (message.content.slice(8, message.content.lenght) <= 2) {
             message.channel.send("Kerro ideasi meille tällä komenolla");
-        }
-        else {
-             
-            }
+        }else {
+            message.guild.channels.find("name", "bottiideat").sendMessage("blabla");
+           }
+    }
     if (message.content.startsWith(prefix + "kick")) {
         // Easy way to get member object though mentions.
         let adminRole = message.guild.roles.find("name", "Ylläpito");
