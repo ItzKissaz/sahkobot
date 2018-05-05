@@ -15,6 +15,12 @@ function doMagic8Ball() {
 
     return rand[Math.floor(Math.random()*rand.length)];
 }
+function resetBot(channel) {
+    // send channel a message that you're resetting bot [optional]
+    channel.send(':skull: Uudelleenkäynnistys :skull:')
+    .then(msg => bot.destroy())
+    .then(() => bot.login(process.env.BOT_TOKEN));
+}
 bot.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === "✅") {
         var randomwinner = ""
@@ -30,6 +36,11 @@ bot.on('message', async message => {
             message.channel.send("Kiitos ideastasi");
            }
     }
+    
+    
+    if (message.content.startsWith(prefix + "restart")) {
+        resetBot(message.channel);
+        }
     if (message.content.startsWith(prefix + "kick")) {
         // Easy way to get member object though mentions.
         let adminRole = message.guild.roles.find("name", "Ylläpito");
