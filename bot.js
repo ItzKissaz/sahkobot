@@ -32,7 +32,7 @@ bot.on('message', async message => {
         if (message.content.slice(8, message.content.lenght) <= 2) {
             message.channel.send("Kerro ideasi meille tällä komenolla");
         }else {
-            message.guild.channels.find("name", "bottiideat").sendMessage(message.content.slice(8, message.content.lenght)));
+            message.guild.channels.find("name", "bottiideat").sendMessage(message.content.slice(8, message.content.lenght));
             message.channel.send("Kiitos ideastasi");
            }
     }
