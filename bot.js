@@ -27,7 +27,7 @@ bot.on('message', async message => {
             message.channel.send("Kerro ideasi meille tällä komenolla");
         }
         else {
-            message.guild.channels.find("name", "bottiideat").sendMessage("blabla"); 
+             
             }
     if (message.content.startsWith(prefix + "kick")) {
         // Easy way to get member object though mentions.
@@ -81,5 +81,5 @@ bot.on('message', async message => {
         
     };
             
-};
+});
 bot.login(process.env.BOT_TOKEN);
