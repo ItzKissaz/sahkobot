@@ -35,8 +35,8 @@ bot.on('message', async message => {
         }else {
             message.guild.channels.find("name", "bottiideat").sendMessage(message.author + " : " + message.content.slice(7, message.content.lenght))
             .then(function (message) {
-              message.react("👍")
-              message.react("👎")
+              message.react("✅")
+              message.react("🚫")
               
               
             }).catch(function() {
@@ -104,4 +104,5 @@ bot.on('message', async message => {
     };
             
 });
+ 
 bot.login(process.env.BOT_TOKEN);
