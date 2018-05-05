@@ -80,6 +80,6 @@ bot.on('message', async message => {
         message.channel.sendMessage('8 Pallo on päättänyt vastauksensa: **' + doMagic8Ball() + '**')
         
     };
-            });
+            
 
 bot.login(process.env.BOT_TOKEN);
