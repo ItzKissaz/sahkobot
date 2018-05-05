@@ -33,10 +33,16 @@ bot.on('message', async message => {
         if (message.content.slice(8, message.content.lenght) <= 2) {
             message.channel.send("Kerro ideasi meille tällä komenolla");
         }else {
-            message.guild.channels.find("name", "bottiideat").sendMessage(message.author + " : " + message.content.slice(7, message.content.lenght)).then{
-                message.react(":white_check_mark:");
-                message.react(":no_entry_sign:");
-                }
+            message.guild.channels.find("name", "bottiideat").sendMessage(message.author + " : " + message.content.slice(7, message.content.lenght))
+            .then(function (message) {
+              message.react("👍")
+              message.react("👎")
+              
+              
+            }).catch(function() {
+              //Something
+             });
+                
             message.channel.send("Kiitos ideastasi");
            }
     }
