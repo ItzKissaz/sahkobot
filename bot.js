@@ -33,7 +33,7 @@ let guild = member.guild;
 let joinRole = guild.roles.find('name', 'Jäsen');
 member.addRole(joinRole);
 let channel = guild.channels.find("name", "liity-poistu");
-channel.sendTTSMessage(`${member.user} liittyi!`)
+channel.send(`${member.user} liittyi!`)
 console.log(`${member.user.username} liittyi`);
 });
 
@@ -42,7 +42,7 @@ console.log(`${member.user.username} liittyi`);
 bot.on('guildMemberRemove', member => {
 let guild = member.guild;
 let channel = guild.channels.find("name", "liity-poistu");
-channel.sendTTSMessage(`${member.user} poistui!`)
+channel.send(`${member.user} poistui!`)
 console.log(`${member.user.username} poistui`);
 });
 bot.on('message', async message => {
