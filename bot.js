@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-var verifycode = "5u0M1";
+var verifycode = "rawq";
 var prefix = "-";
 var test = 100;
 var channelid = "435140636631367712";
@@ -30,8 +30,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
 
 bot.on('guildMemberAdd', member => {
 let guild = member.guild;
-let joinRole = guild.roles.find('name', 'Jäsen');
-member.addRole(joinRole);
+
 let channel = guild.channels.find("name", "liity-poistu");
 channel.send(`${member.user} liittyi!`)
 console.log(`${member.user.username} liittyi`);
@@ -53,7 +52,21 @@ bot.on('message', async message => {
   
   // Let's go with a few common example commands! Feel free to delete or change those.
   
-  
+    if(command === "hyväksyn") {
+        const annettuKoodi = args.join(" ");
+        if (annettuKoodi === ""){
+            message.channel.send("Hyväksy säännöt. -hyväksyn rawq"
+            }
+        if(!annettuKoodi === verifycode){
+            message.channel.send("Virheellinen koodi")
+                }
+        if (annettuKoodi === verifycode){
+            message.channel.send("Koodi oikein. Saat roolin aivan kohta")
+            let joinRole = guild.roles.find('name', 'Jäsen');
+            message.author.addRole(joinRole);
+            }
+            
+    }
     if(command === "say") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
     // To get the "message" itself we join the `args` back into a string with spaces: 
