@@ -53,12 +53,12 @@ bot.on('message', async message => {
     
     // Ooooh nice, combined conditions. <3
         if(!deleteCount || deleteCount < 2 || deleteCount > 100)
-            return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
+            return message.reply("Valitse numero 2-100 väliltä.");
     
     // So we get our messages, and delete them. Simple enough, right?
         const fetched = await message.channel.fetchMessages({count: deleteCount});
         message.channel.bulkDelete(fetched)
-        .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
+        .catch(error => message.reply(`Virhe: ${error}`));
   }
     if (message.content.startsWith(prefix + "restart")) {
         resetBot(message.channel);
