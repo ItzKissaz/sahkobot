@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 var verifycode = "5u0M1";
-var prefix = "j!";
+var prefix = "-";
 var test = 100;
 var channelid = "435140636631367712";
 var sender = "message.author";
@@ -30,26 +30,35 @@ bot.on('messageReactionAdd', (reaction, user) => {
 bot.on('message', async message => {
     if (message.author.bot) return;
   
-    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
   
   // Let's go with a few common example commands! Feel free to delete or change those.
   
-    if(command === "ping") {
-    // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
-    // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
-        const m = await message.channel.send("Ping?");
-        m.edit(`Pong! Saimme yhteyden ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
-  }
   
-  if(command === "say") {
+    if(command === "say") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
     // To get the "message" itself we join the `args` back into a string with spaces: 
-    const sayMessage = args.join(" ");
+        const sayMessage = args.join(" ");
     // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
-    message.delete().catch(O_o=>{}); 
+        message.delete().catch(O_o=>{}); 
     // And we get the bot to say the thing: 
-    message.channel.send(sayMessage);
+        message.channel.send(sayMessage);
+  }
+    if(command === "purge") {
+    // This command removes all messages from all users in the channel, up to 100.
+    
+    // get the delete count, as an actual number.
+        const deleteCount = parseInt(args[0], 10);
+    
+    // Ooooh nice, combined conditions. <3
+        if(!deleteCount || deleteCount < 2 || deleteCount > 100)
+            return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
+    
+    // So we get our messages, and delete them. Simple enough, right?
+        const fetched = await message.channel.fetchMessages({count: deleteCount});
+        message.channel.bulkDelete(fetched)
+        .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
   }
     if (message.content.startsWith(prefix + "restart")) {
         resetBot(message.channel);
@@ -93,7 +102,7 @@ bot.on('message', async message => {
     }
     if(message.content.startsWith(prefix + 'help')) {
         message.delete(1000); //Supposed to delete message
-        message.channel.sendMessage('**Justelius** Ohjeet \n**Kehitän bottia kun ehdin. Komennot ovat saatavilla vain ylläpitäjille');       
+        message.channel.sendMessage('**Justelius** Ohjeet \nKehitän bottia kun ehdin. Komennot ovat saatavilla vain ylläpitäjille');       
         };
       
     if(message.content.startsWith(prefix + '8ball')) {
