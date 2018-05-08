@@ -60,8 +60,15 @@ bot.on('message', async message => {
         const sayMessage = args.join(" ");
     // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
         message.delete().catch(O_o=>{}); 
-    // And we get the bot to say the thing: 
-        message.channel.send(sayMessage);
+    // And we get the bot to say the thing:
+        if (sayMessage === ""){
+            message.channel.send("En voi sanoa mitään jos et määritä minulle sanottavaa");
+
+        } else {
+            
+
+            message.channel.send(sayMessage);
+                }
   }
     if(command === "purge") {
     // This command removes all messages from all users in the channel, up to 100.
