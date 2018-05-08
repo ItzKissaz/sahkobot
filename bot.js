@@ -32,7 +32,7 @@ bot.on('guildMemberAdd', member => {
 let guild = member.guild;
 let joinRole = guild.roles.find('name', 'Jäsen');
 member.addRole(joinRole);
-let channel = guild.channels.find("name", "liity-poistu"):
+let channel = guild.channels.find("name", "liity-poistu");
 channel.sendTTSMessage(`${member.user} liittyi!`)
 console.log(`${member.user.username} liittyi`);
 });
