@@ -29,25 +29,28 @@ bot.on('messageReactionAdd', (reaction, user) => {
 });
 bot.on('message', async message => {
     if (message.author.bot) return;
-    if (message.content.startsWith(prefix + "idea")) {
-        if (message.content.slice(8, message.content.lenght) <= 2) {
-            message.channel.send("Kerro ideasi meille tällä komenolla");
-        }else {
-            message.guild.channels.find("name", "bottiideat").sendMessage(message.author + " : " + message.content.slice(7, message.content.lenght))
-            .then(function (message) {
-              message.react("✅")
-              message.react("🚫")
-              
-              
-            }).catch(function() {
-              //Something
-             });
-                
-            message.channel.send("Kiitos ideastasi");
-           }
-    }
-    
-    
+  
+    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+  
+  // Let's go with a few common example commands! Feel free to delete or change those.
+  
+    if(command === "ping") {
+    // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
+    // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
+        const m = await message.channel.send("Ping?");
+        m.edit(`Pong! Saimme yhteyden ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+  }
+  
+  if(command === "say") {
+    // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
+    // To get the "message" itself we join the `args` back into a string with spaces: 
+    const sayMessage = args.join(" ");
+    // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
+    message.delete().catch(O_o=>{}); 
+    // And we get the bot to say the thing: 
+    message.channel.send(sayMessage);
+  }
     if (message.content.startsWith(prefix + "restart")) {
         resetBot(message.channel);
         }
