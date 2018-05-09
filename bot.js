@@ -55,7 +55,7 @@ bot.on('message', async message => {
     if(command === "hyväksyn") {
             message.channel.send("Hyväksyit säännöt.")
             let joinRole = message.guild.roles.find('name', 'Jäsen');
-            message.author.addRole(joinRole);
+            message.member.addRole(joinRole);
 
     }
     if(command === "say") {
