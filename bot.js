@@ -51,7 +51,15 @@ bot.on('message', async message => {
     const command = args.shift().toLowerCase();
   
   // Let's go with a few common example commands! Feel free to delete or change those.
-  
+    if(command === "soita") {
+        var voiceChannel = message.member.voiceChannel;
+        voiceChannel.join().then(connection =>
+            const dispatcher = connection.playFile('./audiofile.mp3').catch(err => console.log(err));
+            dispatcher.on("end", end => 
+                voiceChannel.leave();
+                         
+                         );
+        }
     if(command === "hyväksyn") {
             message.channel.send("Hyväksyit säännöt.")
             let joinRole = message.guild.roles.find('name', 'Jäsen');
