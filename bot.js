@@ -117,7 +117,7 @@ bot.on('message', async message => {
                 
                
                 
-            message.channel.send(":wave: " + member.displayName + " Kickattiin onnistuneesti.  ");
+            message.channel.send(":wave: " + member.displayName + " Kickattiin onnistuneesti.  \nHänet potki ulos **" + message.author.username + "**");
             }).catch(() => {
              // Failmessage
                 message.channel.send("Yritys evätty");
