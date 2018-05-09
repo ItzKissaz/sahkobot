@@ -53,19 +53,10 @@ bot.on('message', async message => {
   // Let's go with a few common example commands! Feel free to delete or change those.
   
     if(command === "hyväksyn") {
-        
-        if (message.content.slice(11, message.content.lenght) === ""){
-            message.channel.send("Hyväksy säännöt. -hyväksyn rawq")
-            }
-        if(!message.content.slice(11, message.content.lenght) === "rawq"){
-            message.channel.send("Virheellinen koodi")
-                }
-        if (message.content.slice(11, message.content.lenght) === "rawq"){
-            message.channel.send("Koodi oikein. Saat roolin aivan kohta")
-            let joinRole = guild.roles.find('name', 'Jäsen');
+            message.channel.send("Hyväksyit säännöt.")
+            let joinRole = message.guild.roles.find('name', 'Jäsen');
             message.author.addRole(joinRole);
-            }
-            
+
     }
     if(command === "say") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
