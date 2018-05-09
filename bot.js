@@ -54,7 +54,7 @@ bot.on('message', async message => {
     if(command === "soita") {
         var voiceChannel = message.member.voiceChannel;
         voiceChannel.join().then(connection =>
-            const dispatcher = connection.playFile('./audiofile.mp3').catch(err => console.log(err));
+            let dispatcher = connection.playFile('./audiofile.mp3').catch(err => console.log(err));
             dispatcher.on("end", end => 
                 voiceChannel.leave();
                          
