@@ -53,14 +53,14 @@ bot.on('message', async message => {
   // Let's go with a few common example commands! Feel free to delete or change those.
   
     if(command === "hyväksyn") {
-        const annettuKoodi = message.content.slice(11, message.content.lenght);
-        if (annettuKoodi === ""){
+        
+        if (message.content.slice(11, message.content.lenght) === ""){
             message.channel.send("Hyväksy säännöt. -hyväksyn rawq")
             }
-        if(!annettuKoodi === "rawq"){
+        if(!message.content.slice(11, message.content.lenght) === "rawq"){
             message.channel.send("Virheellinen koodi")
                 }
-        if (annettuKoodi === "rawq"){
+        if (message.content.slice(11, message.content.lenght) === "rawq"){
             message.channel.send("Koodi oikein. Saat roolin aivan kohta")
             let joinRole = guild.roles.find('name', 'Jäsen');
             message.author.addRole(joinRole);
