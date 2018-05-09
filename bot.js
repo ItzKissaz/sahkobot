@@ -52,10 +52,10 @@ bot.on('message', async message => {
   
   // Let's go with a few common example commands! Feel free to delete or change those.
   
-    if(command === "hyväksyn") {
+    if(command === "hyvaksyn") {
         const annettuKoodi = args.join(" ");
         if (annettuKoodi === ""){
-            message.channel.send("Hyväksy säännöt. -hyväksyn rawq"
+            message.channel.send("Hyväksy säännöt. -hyväksyn rawq")
             }
         if(!annettuKoodi === verifycode){
             message.channel.send("Virheellinen koodi")
